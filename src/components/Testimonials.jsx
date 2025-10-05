@@ -50,9 +50,9 @@ function TestimonialCard({ t, index }) {
   const base =
     "rounded-3xl p-6 sm:p-7 shadow-sm ring-1 text-gray-700 leading-relaxed";
   const tones = {
-    lightBlue: "bg-sky-50/70 ring-sky-200/80",
-    white: "bg-white ring-gray-200/80",
-    mint: "bg-teal-50/70 ring-teal-200/80",
+    lightBlue: "bg-primary-green/10 ring-primary-green/20",
+    white: "bg-white ring-primary-green/20",
+    mint: "bg-accent-red/10 ring-accent-red/20",
   };
   return (
     <motion.article
@@ -70,8 +70,8 @@ function TestimonialCard({ t, index }) {
           className="h-10 w-10 rounded-full object-cover ring-2 ring-white"
         />
         <div>
-          <div className="font-semibold text-gray-900">{t.name}</div>
-          <div className="text-xs text-gray-500">{t.role}</div>
+          <div className="font-semibold text-primary-maroon">{t.name}</div>
+          <div className="text-xs text-primary-maroon/70">{t.role}</div>
         </div>
       </div>
       <p className="mt-4 text-sm">{t.quote}</p>
@@ -81,11 +81,11 @@ function TestimonialCard({ t, index }) {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative isolate py-20 sm:py-28 bg-sky-50/30">
+    <section id="testimonials" className="relative isolate py-20 sm:py-28 bg-deep-wine/10">
       {/* Pattern overlay */}
       <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-sky-600">Patient Testimonials</p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-sky-900 sm:text-4xl">
+          <p className="text-sm font-semibold text-primary-green">Patient Testimonials</p>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-primary-maroon sm:text-4xl">
           Trust in our expertise
           </h2>
         </div>
@@ -94,7 +94,7 @@ export default function Testimonials() {
           className="w-full h-full"
           style={{
             backgroundImage:
-              "url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%230284c7\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+              "url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%237BAE3A\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
             backgroundSize: "30px 30px",
           }}
         />
@@ -110,7 +110,7 @@ export default function Testimonials() {
               <span>Patient Stories</span>
              
             </div>
-            <h2 className="mt-3 text-sky-900 text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2 className="mt-3 text-primary-maroon text-3xl sm:text-4xl font-bold tracking-tight">
               Patients Gave
               <br />
               Lots of Love
@@ -130,7 +130,7 @@ export default function Testimonials() {
             viewport={{ once: true, amount: 0.4 }}
             className="lg:col-span-5"
           >
-            <div className="overflow-hidden rounded-3xl ring-1 ring-gray-200/80 shadow-xl">
+            <div className="overflow-hidden rounded-3xl ring-1 ring-primary-green/20 shadow-xl">
               <img
                 src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1600&auto=format&fit=crop"
                 alt="Happy patient and surgeon"
@@ -148,7 +148,7 @@ export default function Testimonials() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.4 }}
             custom={0}
-            className="lg:col-span-7 overflow-hidden rounded-3xl ring-1 ring-gray-200/80"
+            className="lg:col-span-7 overflow-hidden rounded-3xl ring-1 ring-primary-green/20"
           >
             <img
               src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1600&auto=format&fit=crop"
@@ -172,7 +172,7 @@ export default function Testimonials() {
         >
           <a
             href="#"
-            className="inline-flex items-center gap-2 rounded-full border border-teal-300 px-4 py-2 text-sm font-medium text-teal-700 hover:bg-teal-50"
+            className="inline-flex items-center gap-2 rounded-full border border-primary-green px-4 py-2 text-sm font-medium text-primary-green hover:bg-primary-green/10"
           >
             View all testimonials <ArrowRight className="h-4 w-4" />
           </a>

@@ -172,8 +172,8 @@ export default function NewServices() {
     <section ref={sectionRef} className="py-24 sm:py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-base font-semibold text-teal-600 tracking-wide uppercase">Our Services</h2>
-          <p className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-sky-900">
+          <h2 className="text-base font-semibold text-primary-green tracking-wide uppercase">Our Services</h2>
+          <p className="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-primary-maroon">
             Advanced Surgical Solutions
           </p>
         </div>
@@ -182,7 +182,7 @@ export default function NewServices() {
           {/* Left: Service List */}
           <div 
             ref={tabsRef}
-            className="lg:col-span-1 h-full lg:max-h-[450px] overflow-y-auto space-y-2 pr-2 scrollbar-thin scrollbar-thumb-sky-200 scrollbar-track-sky-50"
+            className="lg:col-span-1 h-full lg:max-h-[450px] overflow-y-auto space-y-2 pr-2 scrollbar-thin scrollbar-thumb-primary-green/20 scrollbar-track-primary-green/10"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -195,19 +195,19 @@ export default function NewServices() {
                   onClick={() => handleInteraction(index)}
                   className={`w-full flex items-center text-left p-3 rounded-lg transition-all duration-300 transform ${ 
                     isActive 
-                      ? 'bg-sky-800 text-white shadow-md scale-105' 
-                      : 'bg-sky-50/70 hover:bg-sky-100 hover:shadow-sm'
+                      ? 'bg-primary-maroon text-white shadow-md scale-105' 
+                      : 'bg-primary-green/10 hover:bg-primary-green/20 hover:shadow-sm'
                   }`}
                 >
-                  <Icon className={`w-6 h-6 mr-4 flex-shrink-0 ${isActive ? 'text-white' : 'text-teal-600'}`} />
-                  <span className={`font-semibold text-sm ${isActive ? 'text-white' : 'text-sky-900'}`}>{item.title}</span>
+                  <Icon className={`w-6 h-6 mr-4 flex-shrink-0 ${isActive ? 'text-white' : 'text-primary-green'}`} />
+                  <span className={`font-semibold text-sm ${isActive ? 'text-white' : 'text-primary-maroon'}`}>{item.title}</span>
                 </button>
               );
             })}
           </div>
 
           {/* Right: Content Display */}
-          <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl overflow-hidden ring-1 ring-sky-100/80">
+          <div className="lg:col-span-2 bg-white rounded-2xl shadow-xl overflow-hidden ring-1 ring-primary-green/20">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedTab.title}
@@ -226,13 +226,13 @@ export default function NewServices() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 </div>
                 <div className="p-8 md:p-12">
-                  <h3 className="text-2xl font-bold text-sky-900">{selectedTab.title}</h3>
-                  <p className="mt-4 text-base text-sky-900/80 leading-relaxed min-h-[6rem]">{selectedTab.description}</p>
+                  <h3 className="text-2xl font-bold text-primary-maroon">{selectedTab.title}</h3>
+                  <p className="mt-4 text-base text-primary-maroon/80 leading-relaxed min-h-[6rem]">{selectedTab.description}</p>
                   <div className="mt-6 space-y-3 text-sm">
-                      <p><span className="font-semibold text-teal-700">Key Benefit:</span> <span className="text-sky-800/90">{selectedTab.benefit}</span></p>
-                      <p><span className="font-semibold text-teal-700">Technology:</span> <span className="text-sky-800/90">{selectedTab.technology}</span></p>
+                      <p><span className="font-semibold text-primary-green">Key Benefit:</span> <span className="text-primary-maroon/90">{selectedTab.benefit}</span></p>
+                      <p><span className="font-semibold text-primary-green">Technology:</span> <span className="text-primary-maroon/90">{selectedTab.technology}</span></p>
                   </div>
-                  <Link to={selectedTab.path} className="mt-8 inline-block rounded-full bg-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-teal-700 transition-colors">
+                  <Link to={selectedTab.path} className="mt-8 inline-block rounded-full bg-primary-green px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-accent-red transition-colors">
                     Learn More
                   </Link>
                 </div>

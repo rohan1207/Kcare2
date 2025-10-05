@@ -18,6 +18,7 @@ import {
   CheckCircle,
 } from "react-feather";
 import OurTeam from "../components/OurTeam";
+import FounderSection from "../components/FounderSection";
 
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -137,7 +138,7 @@ const AboutUs = () => {
         initial="hidden"
         animate="visible"
         variants={fadeInUp}
-        className="relative bg-gradient-to-r from-sky-800 to-teal-700 text-white overflow-hidden"
+        className="relative bg-gradient-to-r from-deep-wine to-primary-maroon text-white overflow-hidden"
       >
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
@@ -148,7 +149,7 @@ const AboutUs = () => {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center bg-white/20 rounded-full px-4 py-2 mb-6 sm:mt-20 mt-5"
             >
-              <Heart className="w-5 h-5 mr-2 text-sky-200" />
+              <Heart className="w-5 h-5 mr-2 text-primary-green" />
               <span className="text-sm font-medium">
                 Advanced Surgical Care
               </span>
@@ -159,13 +160,13 @@ const AboutUs = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 font-display"
             >
-              About <span className="text-sky-200">Kcare Clinic</span>
+              About <span className="text-primary-green">Kcare Clinic</span>
             </motion.h1>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed text-sky-200/90"
+              className="text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed text-white/90"
             >
               Pioneering the future of surgical care with robotic and
               laparoscopic expertise.
@@ -187,13 +188,13 @@ const AboutUs = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.1 * index }}
-              className="bg-white rounded-2xl p-6 shadow-xl border-t-4 border-sky-600 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              className="bg-white rounded-2xl p-6 shadow-xl border-t-4 border-primary-green hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
-              <stat.icon className="w-8 h-8 text-sky-700 mb-3" />
-              <div className="text-3xl sm:text-4xl font-bold text-sky-900 mb-1">
+              <stat.icon className="w-8 h-8 text-primary-green mb-3" />
+              <div className="text-3xl sm:text-4xl font-bold text-primary-maroon mb-1">
                 {stat.number}
               </div>
-              <div className="text-sky-800/90 text-sm sm:text-base font-medium">
+              <div className="text-primary-maroon/90 text-sm sm:text-base font-medium">
                 {stat.label}
               </div>
             </motion.div>
@@ -222,8 +223,8 @@ const AboutUs = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
                   activeTab === tab.id
-                    ? "bg-gradient-to-r from-sky-700 to-teal-600 text-white shadow-lg"
-                    : "bg-sky-50/70 text-sky-800 hover:bg-sky-100"
+                    ? "bg-gradient-to-r from-primary-maroon to-accent-red text-white shadow-lg"
+                    : "bg-primary-green/10 text-primary-maroon hover:bg-primary-green/20"
                 }`}
               >
                 {tab.label}
@@ -240,10 +241,10 @@ const AboutUs = () => {
             >
               {" "}
               <div className="flex flex-col h-full">
-                <h2 className="text-3xl sm:text-4xl font-bold text-sky-900 mb-8 font-display">
-                  About <span className="text-teal-600">Kcare Clinic</span>
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary-maroon mb-8 font-display">
+                  About <span className="text-primary-green">Kcare Clinic</span>
                 </h2>
-                <div className="flex-grow space-y-6 text-sky-800/90 leading-relaxed">
+                <div className="flex-grow space-y-6 text-primary-maroon/90 leading-relaxed">
                   <p className="text-lg">
                     Kcare Clinic is a premier surgical facility in Pune,
                     specializing in advanced robotic and laparoscopic
@@ -259,12 +260,12 @@ const AboutUs = () => {
                     className="bg-teal-500/5 rounded-xl p-6 border border-teal-500/20 flex flex-col items-center sm:items-start text-center sm:text-left"
                   >
                     <div className="bg-white/80 rounded-full p-3 mb-3">
-                      <MapPin className="w-6 h-6 text-sky-700" />
+                      <MapPin className="w-6 h-6 text-primary-green" />
                     </div>
                     <h3 className="font-semibold text-sky-900 mb-2">
                       Location
                     </h3>
-                    <p className="text-sky-800/90">Pune, Maharashtra</p>
+                    <p className="text-primary-maroon/90">Pune, Maharashtra</p>
                   </motion.div>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
@@ -272,12 +273,12 @@ const AboutUs = () => {
                     className="bg-teal-500/5 rounded-xl p-6 border border-teal-500/20 flex flex-col items-center sm:items-start text-center sm:text-left"
                   >
                     <div className="bg-white/80 rounded-full p-3 mb-3">
-                      <Award className="w-6 h-6 text-sky-700" />
+                      <Award className="w-6 h-6 text-primary-green" />
                     </div>
-                    <h3 className="font-semibold text-sky-900 mb-2">
+                    <h3 className="font-semibold text-primary-maroon mb-2">
                       Accreditation
                     </h3>
-                    <p className="text-sky-800/90">NABH Accredited Facility</p>
+                    <p className="text-primary-maroon/90">NABH Accredited Facility</p>
                   </motion.div>
                 </div>
               </div>
@@ -287,7 +288,7 @@ const AboutUs = () => {
                 transition={{ duration: 0.5 }}
                 className="h-full"
               >
-                <div className="bg-gradient-to-br from-sky-800 to-teal-700 rounded-3xl p-8 text-white h-full flex flex-col">
+                <div className="bg-gradient-to-br from-deep-wine to-primary-maroon rounded-3xl p-8 text-white h-full flex flex-col">
                   <div className="bg-white/20 rounded-2xl p-6 backdrop-blur-sm flex-grow">
                     <h3 className="text-2xl font-bold mb-6 font-display">
                       Why Choose Us?
@@ -311,7 +312,7 @@ const AboutUs = () => {
                           transition={{ delay: index * 0.1 }}
                           className="flex items-start"
                         >
-                          <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-sky-200 flex-shrink-0" />
+                          <CheckCircle className="w-5 h-5 mr-3 mt-0.5 text-primary-green flex-shrink-0" />
                           <span className="text-sm">{item}</span>
                         </motion.li>
                       ))}
@@ -332,7 +333,7 @@ const AboutUs = () => {
               <div className="grid lg:grid-cols-2 gap-8">
                 <motion.div
                   whileHover={{ y: -5 }}
-                  className="bg-gradient-to-br from-sky-800 to-teal-700 backdrop-blur-lg rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden"
+                  className="bg-gradient-to-br from-deep-wine to-primary-maroon backdrop-blur-lg rounded-3xl p-8 sm:p-12 text-white relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-[url('/logo.png')] opacity-5 bg-center bg-no-repeat bg-contain"></div>
                   <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
@@ -355,21 +356,21 @@ const AboutUs = () => {
 
                 <motion.div
                   whileHover={{ y: -5 }}
-                  className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-sky-100/80 relative overflow-hidden"
+                  className="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-primary-green/20 relative overflow-hidden"
                 >
                   {" "}
-                  <div className="absolute inset-0 bg-gradient-to-br from-sky-50/50 to-sky-100/50"></div>
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-sky-200/20 rounded-full -translate-y-16 translate-x-16"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-sky-200/30 rounded-full translate-y-12 -translate-x-12"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-green/10 to-primary-green/5"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary-green/10 rounded-full -translate-y-16 translate-x-16"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary-green/10 rounded-full translate-y-12 -translate-x-12"></div>
                   <div className="relative">
                     {" "}
-                    <div className="bg-gradient-to-br from-sky-700 to-teal-600 rounded-full w-16 h-16 flex items-center justify-center mb-8">
+                    <div className="bg-gradient-to-br from-primary-maroon to-accent-red rounded-full w-16 h-16 flex items-center justify-center mb-8">
                       <Heart className="w-8 h-8 text-white" />
                     </div>
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-sky-900 font-display">
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-primary-maroon font-display">
                       Our Mission & Objectives
                     </h2>
-                    <p className="text-lg sm:text-xl leading-relaxed text-sky-800/90">
+                    <p className="text-lg sm:text-xl leading-relaxed text-primary-maroon/90">
                       Our mission is to provide accessible, affordable, and
                       high-quality surgical care. We aim to leverage advanced
                       technology to minimize patient discomfort, reduce
@@ -385,12 +386,12 @@ const AboutUs = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="bg-white rounded-3xl shadow-xl border border-sky-100/80 overflow-hidden"
+                className="bg-white rounded-3xl shadow-xl border border-primary-green/20 overflow-hidden"
               >
                 <div className="relative p-8 sm:p-12">
-                  <div className="absolute inset-0 bg-gradient-to-br from-sky-50/80 to-white"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-green/10 to-white"></div>
                   <div className="relative">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-sky-900 mb-8 text-center font-display">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-primary-maroon mb-8 text-center font-display">
                       Our Core Values
                     </h3>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -399,29 +400,29 @@ const AboutUs = () => {
                           icon: Heart,
                           title: "Compassion",
                           desc: "Caring with empathy",
-                          gradient: "from-sky-700 to-teal-600",
-                          bg: "from-sky-100/50 to-teal-100/50",
+                          gradient: "from-primary-maroon to-accent-red",
+                          bg: "from-primary-green/10 to-primary-green/5",
                         },
                         {
                           icon: Shield,
                           title: "Safety",
                           desc: "Ensuring patient safety",
-                          gradient: "from-sky-600 to-teal-500",
-                          bg: "from-sky-100/50 to-teal-100/50",
+                          gradient: "from-primary-maroon to-accent-red",
+                          bg: "from-primary-green/10 to-primary-green/5",
                         },
                         {
                           icon: Award,
                           title: "Excellence",
                           desc: "Striving for the best",
-                          gradient: "from-sky-700 to-teal-600",
-                          bg: "from-sky-100/50 to-teal-100/50",
+                          gradient: "from-primary-maroon to-accent-red",
+                          bg: "from-primary-green/10 to-primary-green/5",
                         },
                         {
                           icon: Users,
                           title: "Respect",
                           desc: "Treating all with dignity",
-                          gradient: "from-sky-600 to-teal-500",
-                          bg: "from-sky-100/50 to-teal-100/50",
+                          gradient: "from-primary-maroon to-accent-red",
+                          bg: "from-primary-green/10 to-primary-green/5",
                         },
                       ].map((value, index) => (
                         <motion.div
@@ -444,10 +445,10 @@ const AboutUs = () => {
                             >
                               <value.icon className="w-6 h-6 text-white" />
                             </div>
-                            <h4 className="font-semibold text-sky-900 mb-2 text-center">
+                            <h4 className="font-semibold text-primary-maroon mb-2 text-center">
                               {value.title}
                             </h4>
-                            <p className="text-sm text-sky-800/90 text-center">
+                            <p className="text-sm text-primary-maroon/90 text-center">
                               {value.desc}
                             </p>
                           </div>
@@ -469,17 +470,16 @@ const AboutUs = () => {
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-sky-900 mb-4 font-display">
                   World-Class{" "}
-                  <span className="text-teal-600">Facilities & Services</span>
+                  <span className="text-primary-green">Facilities & Services</span>
                 </h2>
-                <p className="text-lg text-sky-800/90 max-w-3xl mx-auto">
+                <p className="text-lg text-sky-900/90 max-w-3xl mx-auto">
                   State-of-the-art infrastructure and advanced medical equipment
-                  to provide the best possible care
                 </p>
               </div>
 
               <div className="grid lg:grid-cols-2 gap-8">
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-sky-900 mb-6 font-display">
+                  <h3 className="text-2xl font-bold text-primary-maroon mb-6 font-display">
                     Key Facilities
                   </h3>
                   {facilities.map((facility, index) => (
@@ -489,16 +489,16 @@ const AboutUs = () => {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
                       whileHover={{ scale: 1.02 }}
-                      className="flex items-start space-x-4 bg-white p-6 rounded-2xl shadow-sm border border-sky-100/80 hover:shadow-md transition-all"
+                      className="flex items-start space-x-4 bg-white p-6 rounded-2xl shadow-sm border border-primary-green/20 hover:shadow-md transition-all"
                     >
-                      <div className="bg-sky-100/70 p-3 rounded-xl">
-                        <facility.icon className="w-6 h-6 text-sky-700" />
+                      <div className="bg-primary-green/10 p-3 rounded-xl">
+                        <facility.icon className="w-6 h-6 text-primary-green" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-sky-900 mb-1">
+                        <h4 className="font-semibold text-primary-maroon mb-1">
                           {facility.title}
                         </h4>
-                        <p className="text-sky-800/90 text-sm">
+                        <p className="text-primary-maroon/90 text-sm">
                           {facility.desc}
                         </p>
                       </div>
@@ -507,14 +507,14 @@ const AboutUs = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-bold text-sky-900 mb-6 font-display">
+                  <h3 className="text-2xl font-bold text-primary-maroon mb-6 font-display">
                     Our Specialties
                   </h3>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
-                    className="bg-gradient-to-br from-sky-50/70 to-sky-100/70 rounded-3xl p-8"
+                    className="bg-gradient-to-br from-primary-green/10 to-primary-green/5 rounded-3xl p-8"
                   >
                     <div className="grid grid-cols-2 gap-4">
                       {specialties.map((service, index) => (
@@ -525,8 +525,8 @@ const AboutUs = () => {
                           transition={{ delay: index * 0.05 }}
                           className="flex items-center space-x-3"
                         >
-                          <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0" />
-                          <span className="text-sky-900 text-sm sm:text-base">
+                          <CheckCircle className="w-5 h-5 text-primary-green flex-shrink-0" />
+                          <span className="text-primary-maroon text-sm sm:text-base">
                             {service}
                           </span>
                         </motion.div>
@@ -538,7 +538,8 @@ const AboutUs = () => {
             </motion.div>
           )}
           {/* Founder & Team Tab */}
-          {(activeTab === "founder" || activeTab === "team") && (
+          {activeTab === "founder" && <FounderSection />}
+          {activeTab === "team" && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -546,10 +547,10 @@ const AboutUs = () => {
               className="max-w-7xl mx-auto"
             >
               <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-sky-900 mb-4 font-display">
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary-maroon mb-4 font-display">
                   Our Expert Team
                 </h2>
-                <p className="text-lg text-sky-800/90 max-w-3xl mx-auto">
+                <p className="text-lg text-primary-maroon/90 max-w-3xl mx-auto">
                   Led by our founder, our team is composed of dedicated professionals committed to excellence in surgical care.
                 </p>
               </div>
@@ -560,7 +561,7 @@ const AboutUs = () => {
       </div>
 
       {/* Contact Strip */}
-      <div className="mt-16 sm:mt-24 bg-gradient-to-r from-sky-50/70 to-teal-50/70 rounded-xl sm:rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+      <div className="mt-16 sm:mt-24 bg-gradient-to-r from-primary-green/10 to-primary-green/5 rounded-xl sm:rounded-2xl p-6 sm:p-8 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -573,10 +574,10 @@ const AboutUs = () => {
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-sky-900 mb-3 sm:mb-4 font-display">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary-maroon mb-3 sm:mb-4 font-display">
             Have any questions or need a consultation?
           </h3>
-          <p className="text-sky-800/90 mb-4 sm:mb-6 text-sm sm:text-base md:text-lg">
+          <p className="text-primary-maroon/90 mb-4 sm:mb-6 text-sm sm:text-base md:text-lg">
             Our medical experts are here to help. Get in touch with us for any
             medical queries or appointment scheduling.
           </p>
@@ -584,7 +585,7 @@ const AboutUs = () => {
           <Link
             to="/contact"
             href="#"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-700 to-teal-600 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:from-sky-800 hover:to-teal-700 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-maroon to-accent-red text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm sm:text-base font-semibold hover:from-primary-maroon hover:to-accent-red transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Contact Us
             <svg
