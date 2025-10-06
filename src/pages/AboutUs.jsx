@@ -18,7 +18,7 @@ import {
   CheckCircle,
 } from "react-feather";
 import OurTeam from "../components/OurTeam";
-import FounderSection from "../components/FounderSection";
+import MainFounder from "../components/MainFounder";
 
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -537,7 +537,7 @@ const AboutUs = () => {
             </motion.div>
           )}
           {/* Founder & Team Tab */}
-          {activeTab === "founder" && <FounderSection />}
+          {activeTab === "founder" && <MainFounder />}
           {activeTab === "team" && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}

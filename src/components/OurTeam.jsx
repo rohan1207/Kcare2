@@ -27,9 +27,9 @@ const OurTeam = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="bg-white rounded-2xl shadow-lg overflow-hidden border border-sky-100/80 flex flex-col"
+          className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-primary-green/20 flex flex-col hover:shadow-2xl transition-shadow duration-300"
         >
-          <div className="relative h-80 bg-sky-50">
+          <div className="relative h-80 bg-primary-green/5">
             <img
               src={member.image}
               alt={member.name}
@@ -37,11 +37,11 @@ const OurTeam = () => {
             />
           </div>
           <div className="p-6 lg:p-8 flex-grow flex flex-col">
-            <h3 className="text-2xl font-bold text-sky-900 mb-2">{member.name}</h3>
-            <p className="text-sm font-semibold text-teal-600 mb-4 tracking-wide uppercase">{member.title}</p>
-            <p className="text-sky-900/80 leading-relaxed flex-grow">{member.summary}</p>
+            <h3 className="text-2xl font-bold text-primary-maroon mb-2">{member.name}</h3>
+            <p className="text-sm font-semibold text-primary-green mb-4 tracking-wide uppercase">{member.title}</p>
+            <p className="text-primary-maroon/80 leading-relaxed flex-grow">{member.summary}</p>
             <div className="mt-6">
-              <a href={`/team/${member.id}`} className="group inline-flex items-center gap-2 text-sm font-semibold text-sky-800 hover:text-sky-900 transition-colors">
+              <a href={`/team/${member.id}`} className="group inline-flex items-center gap-2 text-sm font-semibold text-primary-green hover:text-accent-red transition-colors">
                 Learn More
                 <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
               </a>

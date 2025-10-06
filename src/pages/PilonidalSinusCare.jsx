@@ -6,7 +6,7 @@ import ProcedureTimeline from '../components/Timeline';
 
 const ServicePageLayout = ({ service }) => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -15,7 +15,7 @@ const ServicePageLayout = ({ service }) => {
         className="relative h-[50vh] min-h-[400px] bg-cover bg-center flex items-center justify-center text-white"
         style={{ backgroundImage: `url(${service.image})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-sky-900/70 via-sky-900/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary-maroon/80 via-deep-wine/60 to-transparent"></div>
         <div className="relative z-10 text-center px-4">
           <motion.div 
             initial={{ scale: 0.5, opacity: 0 }} 
@@ -37,7 +37,7 @@ const ServicePageLayout = ({ service }) => {
             initial={{ y: 20, opacity: 0 }} 
             animate={{ y: 0, opacity: 1 }} 
             transition={{ delay: 0.6 }}
-            className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-sky-100/90"
+            className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90"
           >
             {service.subtitle}
           </motion.p>
@@ -52,24 +52,24 @@ const ServicePageLayout = ({ service }) => {
           <div className="lg:col-span-2 space-y-12">
             {/* Overview Section */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5 }}>
-              <h2 className="text-3xl font-bold text-sky-900 mb-4 font-display">Overview</h2>
-              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <h2 className="text-3xl font-bold text-primary-maroon mb-4 font-display">Overview</h2>
+              <div className="prose prose-lg max-w-none text-deep-wine/90 leading-relaxed">
                 {service.overview.map((p, i) => <p key={i}>{p}</p>)}
               </div>
             </motion.div>
 
             {/* Benefits Section */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5, delay: 0.1 }}>
-              <h2 className="text-3xl font-bold text-sky-900 mb-6 font-display">Key Benefits</h2>
+              <h2 className="text-3xl font-bold text-primary-maroon mb-6 font-display">Key Benefits</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {service.benefits.map((benefit, i) => (
                   <div key={i} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 p-2 bg-teal-100 rounded-full">
-                      <ShieldCheck className="w-6 h-6 text-teal-700" />
+                    <div className="flex-shrink-0 p-2 bg-primary-green/10 rounded-full">
+                      <ShieldCheck className="w-6 h-6 text-primary-green" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-sky-800">{benefit.title}</h3>
-                      <p className="text-gray-600">{benefit.description}</p>
+                      <h3 className="text-lg font-semibold text-primary-maroon">{benefit.title}</h3>
+                      <p className="text-deep-wine/80">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
@@ -78,8 +78,8 @@ const ServicePageLayout = ({ service }) => {
 
             {/* Technology Section */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5, delay: 0.2 }}>
-              <h2 className="text-3xl font-bold text-sky-900 mb-4 font-display">Advanced Technology</h2>
-              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+              <h2 className="text-3xl font-bold text-primary-maroon mb-4 font-display">Advanced Technology</h2>
+              <div className="prose prose-lg max-w-none text-deep-wine/90 leading-relaxed">
                 <p>{service.technology.description}</p>
               </div>
             </motion.div>
@@ -92,13 +92,13 @@ const ServicePageLayout = ({ service }) => {
               whileInView={{ opacity: 1, x: 0 }} 
               viewport={{ once: true, amount: 0.5 }} 
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-white p-8 rounded-2xl shadow-xl border border-sky-100/80"
+              className="bg-white p-8 rounded-2xl shadow-xl border border-primary-green/20"
             >
-              <h3 className="text-2xl font-bold text-sky-900 mb-6 text-center">Schedule a Consultation</h3>
-              <p className="text-center text-gray-600 mb-6">Get a modern, minimally invasive solution for pilonidal sinus.</p>
+              <h3 className="text-2xl font-bold text-primary-maroon mb-6 text-center">Schedule a Consultation</h3>
+              <p className="text-center text-deep-wine/80 mb-6">Get a modern, minimally invasive solution for pilonidal sinus.</p>
               <Link 
                 to="/contact"
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-sky-700 to-teal-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:from-sky-800 hover:to-teal-700 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-primary-maroon to-accent-red text-white px-6 py-3 rounded-full text-lg font-semibold hover:from-accent-red hover:to-primary-maroon transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Contact Us <ArrowRight className="w-5 h-5" />
               </Link>
@@ -109,13 +109,13 @@ const ServicePageLayout = ({ service }) => {
               whileInView={{ opacity: 1, x: 0 }} 
               viewport={{ once: true, amount: 0.5 }} 
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-sky-50/70 p-8 rounded-2xl border border-sky-100/90"
+              className="bg-primary-green/5 p-8 rounded-2xl border border-primary-green/20"
             >
-              <h3 className="text-xl font-bold text-sky-900 mb-4">Why Choose K-Care?</h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start"><Stethoscope className="w-5 h-5 text-teal-600 mr-3 mt-1 flex-shrink-0" />Expert surgical team with years of experience.</li>
-                <li className="flex items-start"><HeartPulse className="w-5 h-5 text-teal-600 mr-3 mt-1 flex-shrink-0" />Patient-centric approach with compassionate care.</li>
-                <li className="flex items-start"><ShieldCheck className="w-5 h-5 text-teal-600 mr-3 mt-1 flex-shrink-0" />State-of-the-art technology for better outcomes.</li>
+              <h3 className="text-xl font-bold text-primary-maroon mb-4">Why Choose K-Care?</h3>
+              <ul className="space-y-3 text-deep-wine/90">
+                <li className="flex items-start"><Stethoscope className="w-5 h-5 text-primary-green mr-3 mt-1 flex-shrink-0" />Expert surgical team with years of experience.</li>
+                <li className="flex items-start"><HeartPulse className="w-5 h-5 text-primary-green mr-3 mt-1 flex-shrink-0" />Patient-centric approach with compassionate care.</li>
+                <li className="flex items-start"><ShieldCheck className="w-5 h-5 text-primary-green mr-3 mt-1 flex-shrink-0" />State-of-the-art technology for better outcomes.</li>
               </ul>
             </motion.div>
           </aside>

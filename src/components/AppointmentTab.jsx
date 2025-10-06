@@ -35,7 +35,24 @@ const conditions = [
   "Hydrocele",
   "Thyroid",
 ];
-const times = ["09:00 AM", "11:00 AM", "02:00 PM", "04:00 PM"];
+const generateTimeSlots = () => {
+  const slots = [];
+  // Start from 9:30 AM
+  for (let i = 0; i < (23 - 9.5) * 2; i++) {
+    const totalMinutes = 9 * 60 + 30 + i * 30;
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    const period = hours >= 12 ? 'PM' : 'AM';
+    const displayHours = hours > 12 ? hours - 12 : (hours === 0 ? 12 : hours);
+    slots.push(
+      `${String(displayHours).padStart(2, '0')}:${String(minutes).padStart(2, '0')} ${period}`
+    );
+  }
+  slots.push("11:00 PM");
+  return slots;
+};
+
+const times = generateTimeSlots();
 
 function CalendarDatePicker({ selectedDate, onDateChange, close }) {
   const [currentMonth, setCurrentMonth] = useState(startOfMonth(new Date()));
@@ -52,7 +69,7 @@ function CalendarDatePicker({ selectedDate, onDateChange, close }) {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
-      className="absolute top-full mt-2 w-72 bg-white/95 backdrop-blur-lg rounded-2xl shadow-lg p-4 z-20 border border-primary-green/20"
+      className="absolute top-full mt-2 w-72 bg-white/95 backdrop-blur-lg rounded-2xl shadow-lg p-4 z-20 border border-primary-green/20 max-h-[300px] overflow-y-auto custom-scrollbar"
       onClick={(e) => e.stopPropagation()}
     >
       <div className="flex items-center justify-between mb-3">
@@ -89,7 +106,7 @@ function Dropdown({ options, selected, onSelect, close, isScrollable = false }) 
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
-      className={`absolute mt-2 w-full bg-white/95 backdrop-blur-lg rounded-xl shadow-lg p-2 z-20 border border-primary-green/20 ${isScrollable ? 'h-48 overflow-y-auto' : ''}`}
+      className={`absolute mt-2 w-full bg-white/95 backdrop-blur-lg rounded-xl shadow-lg p-2 z-20 border border-primary-green/20 ${isScrollable ? 'max-h-[180px] overflow-y-auto custom-scrollbar' : ''}`}
       onClick={(e) => e.stopPropagation()}
     >
       {options.map((option) => (
@@ -198,14 +215,14 @@ export default function AppointmentTab() {
                   ) : field === "date" ? (
                     <CalendarDatePicker selectedDate={formData.date} onDateChange={(v) => handleSelect("date", v)} close={() => setOpenDropdown(null)} />
                   ) : field === "time" ? (
-                    <Dropdown options={times} selected={formData.time} onSelect={(v) => handleSelect("time", v)} close={() => setOpenDropdown(null)} />
+                    <Dropdown options={times} selected={formData.time} onSelect={(v) => handleSelect("time", v)} close={() => setOpenDropdown(null)} isScrollable={true} />
                   ) : null)}
               </AnimatePresence>
             </div>
           ))}
           <button
             type="submit"
-            className="w-full lg:col-span-1 md:col-span-3 sm:col-span-2 px-4 py-3 bg-primary-green text-white rounded-xl shadow-lg hover:bg-accent-red transition-colors font-semibold text-sm"
+            className="w-full lg:col-span-1 md:col-span-3 sm:col-span-2 px-4 py-3 bg-primary-green text-white rounded-xl shadow-lg hover:bg-primary-gree/90 transition-colors font-semibold text-sm"
           >
             Book Now
           </button>

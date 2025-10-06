@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MobileNotice from "./components/MobileNotice";
+import ScrollToTop from "./components/ScrollToTop";
 
 import ContactUs from "./pages/ContactUs";
 import BookAppointment from "./pages/BookAppointment";
@@ -30,11 +31,37 @@ import GalleryPage from "./pages/Gallery";
 
 export default function App() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white text-stone-900">
-      <BrowserRouter>
-        <AppInner />
-      </BrowserRouter>
-    </div>
+    <>
+      {/* Main app content - hidden on mobile */}
+      <div className="hidden lg:block min-h-screen overflow-x-hidden bg-white text-stone-900">
+        <BrowserRouter>
+          <AppInner />
+        </BrowserRouter>
+      </div>
+      
+      {/* Mobile notice - shown only on mobile/tablet */}
+      <div className="block lg:hidden fixed inset-0 bg-gradient-to-b from-gray-900 to-black z-[9999] flex items-center justify-center p-6">
+        <div className="max-w-md mx-auto text-center">
+          <div className="mb-8">
+            <h1 className="text-4xl font-light text-primary-green mb-3">KCare</h1>
+            <div className="h-[1px] w-20 bg-white/20 mx-auto"></div>
+          </div>
+          
+          <h2 className="text-2xl text-white font-light mb-6">
+            Please Visit on Desktop
+          </h2>
+          
+          <p className="text-white/70 text-lg mb-8">
+            For the best experience and complete access to all features, please visit our website using a desktop or laptop computer.
+          </p>
+          
+          <div className="text-white/50 text-sm">
+            <p>Minimum screen width required: 1024px</p>
+            <p className="mt-2">Current device: Mobile/Tablet</p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
@@ -43,6 +70,7 @@ function AppInner() {
   const isHome = location.pathname === "/";
   return (
     <>
+      <ScrollToTop smooth={false} />
       <Navbar />
       <main className={isHome ? "" : "pt-24 lg:pt-28"}>
         <Routes>

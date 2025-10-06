@@ -50,12 +50,12 @@ export default function Navbar() {
   const linkTheme = 'text-white/90 hover:text-white';
   const underlineClass = 'absolute bottom-1 left-0 right-0 h-[2px] origin-left transform scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100 bg-white';
   const activeUnderlineClass = 'absolute bottom-1 left-0 right-0 h-[2px] scale-x-100 bg-white';
-  const ctaClasses = 'text-white bg-primary-green hover:bg-accent-red rounded-full shadow-md shadow-sky-900/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/40';
+  const ctaClasses = 'text-white bg-primary-green hover:bg-primary-green/90 rounded-full shadow-md shadow-sky-900/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400/40';
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <nav
-        className='bg-primary-maroon rounded-bl-2xl rounded-br-2xl shadow-lg'
+        className='bg-deep-wine rounded-bl-2xl rounded-br-2xl shadow-lg'
         aria-label="Global"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-4 lg:py-6 flex items-center justify-between">
@@ -120,14 +120,14 @@ export default function Navbar() {
                         leaveFrom="opacity-100 translate-y-0"
                         leaveTo="opacity-0 translate-y-1"
                       >
-                        <div className="absolute -left-8 top-full z-10 mt-5 w-screen max-w-md overflow-hidden rounded-2xl bg-primary-maroon/90 shadow-lg ring-1 ring-white/10 backdrop-blur-md">
+                        <div className="absolute -left-8 top-full z-10 mt-5 w-screen max-w-md overflow-hidden rounded-2xl bg-white/95 shadow-lg ring-1 ring-primary-maroon/20 backdrop-blur-md">
                           <div className="p-4 grid grid-cols-2 gap-x-6 gap-y-2">
                             {item.children.map((child) => (
                               <a
                                 key={child.name}
                                 href={child.href}
                                 onClick={() => setProceduresMenuOpen(false)}
-                                className="block p-2 text-sm font-medium text-white rounded-lg hover:bg-white/10"
+                                className="block p-2 text-sm font-medium text-primary-maroon rounded-lg hover:bg-primary-maroon/10 transition-colors"
                               >
                                 {child.name}
                               </a>

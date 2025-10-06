@@ -4,60 +4,60 @@ import { motion } from 'framer-motion';
 const galleryImages = [
   {
     id: 1,
-    src: 'https://images.unsplash.com/photo-1588776814546-daab701a2932?q=80&w=2070&auto=format&fit=crop',
-    alt: 'Surgeons performing a robotic-assisted surgery in a modern operating room.',
+    src: '/gallery1.webp',
+    alt: 'Surgeons performing robotic-assisted surgery in a modern operating room.',
     colSpan: 'md:col-span-2',
     rowSpan: 'md:row-span-2',
   },
   {
     id: 2,
-    src: 'https://images.unsplash.com/photo-1579684385127-6c1d73a7f832?q=80&w=1974&auto=format&fit=crop',
-    alt: 'Close-up of a surgeon\'s hands in sterile gloves during an operation.',
+    src: '/gallery2.webp',
+    alt: "Close-up of a surgeon's hands in sterile gloves during an operation.",
   },
   {
     id: 3,
-    src: 'https://images.unsplash.com/photo-1629424962522-190d5f29904a?q=80&w=2070&auto=format&fit=crop',
+    src: '/gallery3.png',
     alt: 'Advanced medical imaging display showing a human organ.',
   },
   {
     id: 4,
-    src: 'https://images.unsplash.com/photo-1551590192-34b9a7c5a499?q=80&w=2070&auto=format&fit=crop',
+    src: '/gallery4.png',
     alt: 'A modern, well-lit hospital corridor.',
     colSpan: 'md:col-span-2',
   },
   {
     id: 5,
-    src: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=2070&auto=format&fit=crop',
+    src: '/gallery5.png',
     alt: 'A team of medical professionals in discussion.',
     colSpan: 'md:col-span-2',
   },
   {
     id: 6,
-    src: 'https://images.unsplash.com/photo-1618932260683-8c2f874a4b88?q=80&w=2070&auto=format&fit=crop',
+    src: '/gallery6.png',
     alt: 'Detailed view of a surgical robot arm.',
     colSpan: 'md:col-span-2',
     rowSpan: 'md:row-span-2',
   },
   {
     id: 7,
-    src: 'https://images.unsplash.com/photo-1631217872135-c52155620002?q=80&w=1974&auto=format&fit=crop',
+    src: '/gallery7.png',
     alt: 'Patient resting comfortably in a hospital bed post-surgery.',
   },
   {
     id: 8,
-    src: 'https://images.unsplash.com/photo-1530497610242-d495ce35b7e0?q=80&w=2070&auto=format&fit=crop',
+    src: '/gallery8.png',
     alt: 'Sterile surgical instruments laid out on a tray.',
   },
 ];
 
 const GalleryPage = () => {
   return (
-    <div className="bg-gray-50/70 min-h-screen">
+    <div className="bg-white min-h-screen">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="relative bg-gradient-to-br from-sky-800 to-teal-700 py-24 sm:py-32 text-white"
+        className="relative bg-gradient-to-br from-primary-maroon to-deep-wine py-24 sm:py-32 text-white"
       >
         <div className="absolute inset-0 bg-[url('/logo.png')] opacity-5 bg-center bg-no-repeat bg-contain"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
@@ -73,7 +73,7 @@ const GalleryPage = () => {
             initial={{ y: 20, opacity: 0 }} 
             animate={{ y: 0, opacity: 1 }} 
             transition={{ delay: 0.4 }}
-            className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-sky-100/90"
+            className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/90"
           >
             A glimpse into the precision, technology, and care that define our practice.
           </motion.p>
