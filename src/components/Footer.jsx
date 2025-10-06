@@ -6,7 +6,7 @@ export default function Footer() {
           {/* Brand + short mission */}
           <div className="lg:w-1/3">
             <a href="/" className="inline-flex items-center gap-3">
-              <img src="/logo3.png" alt="Kcare" className="h-10 w-auto" />
+              <img src="/logo2.png" alt="Kcare" className="h-10 w-auto" />
               <span className="font-display text-2xl font-semibold tracking-tight text-white">
                 Kcare Clinic
               </span>

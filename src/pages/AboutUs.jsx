@@ -461,6 +461,7 @@ const AboutUs = () => {
             </motion.div>
           )}
           {/* Facilities Tab */}
+                   {/* Facilities Tab */}
           {activeTab === "facilities" && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -468,15 +469,14 @@ const AboutUs = () => {
               transition={{ duration: 0.5 }}
             >
               <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-sky-900 mb-4 font-display">
+                <h2 className="text-3xl sm:text-4xl font-bold text-primary-maroon mb-4 font-display">
                   World-Class{" "}
                   <span className="text-primary-green">Facilities & Services</span>
                 </h2>
-                <p className="text-lg text-sky-900/90 max-w-3xl mx-auto">
+                <p className="text-lg text-primary-maroon/90 max-w-3xl mx-auto">
                   State-of-the-art infrastructure and advanced medical equipment
                 </p>
               </div>
-
               <div className="grid lg:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <h3 className="text-2xl font-bold text-primary-maroon mb-6 font-display">
@@ -505,7 +505,6 @@ const AboutUs = () => {
                     </motion.div>
                   ))}
                 </div>
-
                 <div className="space-y-6">
                   <h3 className="text-2xl font-bold text-primary-maroon mb-6 font-display">
                     Our Specialties
